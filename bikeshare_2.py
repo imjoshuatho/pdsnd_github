@@ -42,7 +42,6 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -79,7 +78,6 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -142,7 +140,6 @@ def trip_duration_stats(df):
     print('Total travel time: ', total)
 
 
-
     # TO DO: display mean travel time
     mean = df['Total Time'].mean()
     print('Mean travel time: ', mean)
@@ -192,8 +189,6 @@ def display_data(df):
             print(df.iloc[start:end])
             start += 5
             end += 5
-
-
 
 
 def main():
